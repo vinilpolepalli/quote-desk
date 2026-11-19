@@ -1,0 +1,8 @@
+Project: "Quote Desk" - independent demo inspired by the problem space of GUILD (YC S26), which uses automated manufacturing to produce and deliver aerospace parts. NOT affiliated; say so in footer.
+
+Concept: a machine-shop quoting and capacity desk for precision-machined aerospace parts (keep parts generic and non-sensitive: brackets, housings, fittings - nothing weapons-related). Deterministic engine:
+- Input: a sample part (material, stock size, features, tolerance class, quantity) from a small in-repo sample catalog (5-6 parts), plus editable shop assumptions (machine hourly rates, available machine-hours per week, setups).
+- Output: estimated cycle time, cost breakdown (material/setup/machine/inspection), lead time given current sample backlog, and a process-risk flag per part (e.g. tight-tolerance features need grinding + CMM time; thin walls flagged). All deterministic arithmetic.
+- UI: quote panel, per-part risk flags (QUOTE OK / REVIEW PROCESS / CAPACITY TIGHT), week capacity bar showing sample backlog vs machine-hours. Dark sleek UI, distinct accent: LIME (not indigo/emerald/amber/sky/rose).
+Honesty bar (learned from reviewer): header badge "Sample data - demo"; copy must state every number is invented sample data and flags are plain deterministic arithmetic; no real customer/defense claims; no live data implications; footer: "Independent demo built by Vinil Polepalli. Not affiliated with or endorsed by GUILD."
+Tech: Next.js static export (output:'export'), npm run build must pass, no runtime external calls. Write SPEC.md first, then implement in slices. No git commit, no deploy.

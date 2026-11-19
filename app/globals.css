@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-ground text-ink font-sans antialiased; font-variant-numeric: tabular-nums; }
+  input, select { @apply w-full rounded-btn border border-hair bg-white px-3 py-2 text-base sm:text-sm; }
+  input:focus, select:focus, button:focus-visible, a:focus-visible { @apply outline outline-2 outline-offset-1 outline-accent; }
+}
+@layer components {
+  .card { @apply rounded-card border border-hair bg-white p-4 sm:p-5; }
+  .label { @apply text-[11px] font-semibold uppercase tracking-wider text-mute; font-variant-caps: all-small-caps; letter-spacing: .08em; font-size: 12px; }
+  .btn { @apply inline-flex min-h-[44px] items-center justify-center rounded-btn border border-hair bg-white px-4 text-sm font-medium text-ink hover:bg-ground sm:min-h-[38px]; }
+  .btn-primary { @apply border-accent bg-accent text-white hover:border-accent-hover hover:bg-accent-hover; }
+  .pill { @apply inline-block rounded-full border px-2.5 py-0.5 text-xs font-semibold; } /* unslop-ignore: deliberate status-chip treatment per REBUILD-SPEC; buttons 8px, cards 10px, inputs 8px */
+  .mono { @apply font-mono; }
+}
